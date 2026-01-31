@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vijaya Handworks</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vijaya Handworks</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    /* ===== BACKGROUND ANIMATION ===== */
+    body{
+      min-height:100vh;
+      color:#f5f5ff;
+      overflow-x:hidden;
+      background:linear-gradient(
+        120deg,
+        #0a0f3d,
+        #1b1457,
+        #3a1d6a,
+        #1b1457,
+        #0a0f3d
+      );
+      background-size:600% 600%;
+      animation:movingFabric 36s linear infinite;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255,180,220,0.15), transparent 45%),
+        radial-gradient(circle at 80% 70%, rgba(180,160,255,0.15), transparent 45%);
+      animation:softMove 30s ease-in-out infinite alternate;
+      z-index:-1;
+    }
+
+    @keyframes movingFabric{
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+
+    
+    /* ===== HEADER ===== */
+    header{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    /* ===== TEXT LOGO ===== */
+    .logo-text{
+      font-family:'Great Vibes',cursive;
+      font-size:4.4rem;
+      color:#ffd6f5;
+      letter-spacing:3px;
+      animation:logoFloat 6s ease-in-out infinite;
+      text-shadow:
+        0 0 15px rgba(255,180,220,0.6),
+        0 0 35px rgba(200,140,255,0.5);
+    }
+
+    .logo-text span{
+      display:block;
+      font-family:'Poppins',sans-serif;
+      font-size:1rem;
+      letter-spacing:5px;
+      margin-top:-10px;
+      color:#ffd6f5;
+      text-transform:uppercase;
+    }
+
+    @keyframes logoFloat{
+      0%{transform:translateY(0)}
+      50%{transform:translateY(-14px)}
+      100%{transform:translateY(0)}
+    }
+
+    h1{
+      margin-top:25px;
+      font-size:3.2rem;
+      font-family:'Playfair Display',serif;
+      animation:fadeDown 2s ease forwards;
+    }
+
+    @keyframes fadeDown{
+      from{opacity:0;transform:translateY(-40px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    h2{
+      margin-top:12px;
+      font-size:2.4rem;
+      text-align: center;
+      letter-spacing:4px;
+      color:#000c0c;
+      text-shadow:0 0 22px rgba(234, 244, 255, 0.841);
+    }
+
+    .tagline{
+      margin-top:16px;
+      opacity:.9;
+      font-size:1.1rem;
+    }
+
+    section{padding:90px 8%}
+
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:35px;
+    }
+
+    .card{
+      background: #3a1d6a;
+      margin:15px;
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:0 0 0 rgba(255,106,162,0);
+      border:2px solid transparent;
+      background-clip: padding-box;
+      cursor:pointer;
+      animation:fadeUp 1.4s ease both;
+      transition:.6s;
+    }
+
+    .card:hover{
+      transform:translateY(-18px) scale(1.06);
+      box-shadow:0 0 25px rgba(255,106,162,0.7), 0 0 45px rgba(255,180,220,0.5);
+      border:2px solid rgba(255,160,210,0.8);
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(80px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    .card img{
+      width:400px;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .card h3{
+      color:#050a1f;
+      padding:18px;
+      background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+      font-size:1.4rem;
+    }
+
+    .about{
+      color: black ;
+      background:rgba(101, 247, 255, 0.518);
+      backdrop-filter:blur(8px);
+      border-radius:35px;
+      padding:45px;
+      margin: 60px;
+      box-shadow:0 0 35px rgba(180,120,255,0.35);
+      animation:fadeUp 1.5s ease both;
+    }
+
+    .contact{text-align:center;margin-top:70px}
+
+    .whatsapp{
+      display:inline-block;
+      margin-top:25px;
+      padding:18px 40px;
+      background:linear-gradient(135deg,#25D366,#1ebe5d);
+      color:white;
+      border-radius:40px;
+      text-decoration:none;
+      font-size:1.1rem;
+      box-shadow:0 10px 25px rgba(0,0,0,0.25);
+      animation:pulse 2.5s infinite;
+    }
+
+    footer{text-align:center;margin:45px 0;}
+  @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="logo-text">
+    Vijaya
+    <span>🪡Handworks</span>
+  </div>
+  <h1 class="title">Handmade with Love</h1>
+  <h2>VIJAYA</h2>
+  <p class="tagline">Aari • Crochet • Accessories</p>
+</header>
+
+<section>
+  <div class="gallery">
+    <div class="card" onclick="go('aari.html')">
+      <img src="vijaya/aa.jpg">
+      <h3>🪡 Aari Works</h3>
+    </div>
+
+    <div class="card" onclick="go('crochet.html')">
+      <img src="vijaya/ch.jpg">
+      <h3>🧶 Crochet Designs</h3>
+    </div>
+
+    <div class="card" onclick="go('accessories.html')">
+      <img src="vijaya/acc.jpg">
+      <h3>🎀 Mini Accessories</h3>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <h2>About My Mom</h2><br>
+  <p>
+      Vijaya lovingly creates each piece by hand, blending tradition, patience, and creativity. What started as a passion has become a beautiful journey of craftsmanship. From intricate Aari embroidery to delicate crochet and charming mini accessories, every creation reflects her love, dedication, and artistic soul. Each stitch carries warmth, care, and a story made with heart.
+  </p>
+</section>
+
+<div class="contact">
+  <h2>Contact</h2>
+  <a class="whatsapp" href="https://wa.me/916379468191">Chat on WhatsApp</a>
+</div>
+
+<footer>
+  © Vijaya's Handworks | Made with ❤️ for Mom✨
+</footer>
+
+<script>
+  function go(p){location.href=p}
+</script>
+
+</body>
+</html>

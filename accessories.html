@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Accessories | Vijaya Handworks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{min-height:100%;background:linear-gradient(90deg,#000826,#cc19c0,#6d44e7);margin:0;padding:0;background-size:600% 600%;color:#eaeaff}
+    header{min-height:50vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px}
+    h1{font-family:'Playfair Display',serif;font-size:3rem;color:#ff9ecd;animation:glow 3s infinite alternate}
+    @keyframes glow{from{text-shadow:0 0 8px #fff}to{text-shadow:0 0 30px #ff6aa2,0 0 60px #ffc3d9}}
+    .subtitle{margin-top:12px;font-size:1.1rem;opacity:.85}
+    section{padding:10px 8%}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;margin-top:30px}
+    .card{
+      height:320px;background:#fff;border-radius:28px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:.6s}
+    .card:hover{transform:translateY(-16px) scale(1.05);box-shadow:0 0 25px rgba(255,106,162,.7),0 0 45px rgba(255,180,220,.5);border:2px solid rgba(255,160,210,.9)}
+    .card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .back{text-align:center;margin:70px 0}
+    .back a{padding:14px 34px;border-radius:35px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#ff6aa2,#ffb347);box-shadow:0 10px 25px rgba(0,0,0,.25);transition:.4s}
+    .back a:hover{transform:scale(1.08)}
+    @media(max-width:768px){.gallery{grid-template-columns:1fr}h1{font-size:2.4rem}}
+  /* WhatsApp overlay button */
+    .card{position:relative}
+    .wa-btn{
+      position:absolute;
+      bottom:12px;
+      right:12px;
+      background:#25D366;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:30px;
+      font-size:14px;
+      text-decoration:none;
+      opacity:0;
+      transform:scale(0.8);
+      transition:.4s;
+      box-shadow:0 10px 25px rgba(0,0,0,.25);
+    }
+    .card:hover .wa-btn{opacity:1;transform:scale(1)}
+
+  </style>
+</head>
+<body>
+<header>
+  <h1>Mini Accessories</h1>
+  <p class="subtitle">Little handmade pieces filled with charm</p>
+</header>
+<section>
+  <div class="gallery">
+    <div class="card"><img src="vijaya/ac1.jpg"><a class="wa-btn" href="https://wa.me/916379468191?text=Hello%20Vijaya,%0A%0AI%20am%20interested%20in%20this%20Mini%20Accessries:%0Ahttps://github.com/Manoranjani-S/vijayahandworks.git/Vijaya/vijaya/ac1.jpg" target="_blank">Order on WhatsApp</a></div>
+    <div class="card"><img src="vijaya/ac2.jpg"><a class="wa-btn" href="https://wa.me/916379468191?text=Hello%20Vijaya,%0A%0AI%20am%20interested%20in%20this%20Mini%20Accessries:%0Ahttps://github.com/Manoranjani-S/vijayahandworks.git/Vijaya/vijaya/ac2.jpg" target="_blank">Order on WhatsApp</a></div>
+    <div class="card"><img src="vijaya/ac3.jpg"><a class="wa-btn" href="https://wa.me/916379468191?text=Hello%20Vijaya,%0A%0AI%20am%20interested%20in%20this%20Mini%20Accessries:%0Ahttps://github.com/Manoranjani-S/vijayahandworks.git/Vijaya/vijaya/ac3.jpg" target="_blank">Order on WhatsApp</a></div>
+  </div>
+</section>
+<div class="back"><a href="index.html">← Back to Home</a></div>
+</body>
+</html>
